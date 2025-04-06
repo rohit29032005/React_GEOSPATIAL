@@ -9,14 +9,14 @@ import { motion } from "framer-motion"
 export default function TeamSection() {
   const teamMembers = [
     {
-      name: "Alex Johnson",
-      role: "President",
-      image: "/placeholder.svg?height=300&width=300",
+      name: "ROHIT SHRIVASTAVA",
+      role: "CHAIRPERSON",
+      image: "/public/CHAIRPERSON.jpg?height=300&width=300",
       bio: "GIS specialist with a background in environmental science. Passionate about using spatial data to solve real-world problems.",
     },
     {
-      name: "Maya Patel",
-      role: "Vice President",
+      name: "SAHIL ZAMBRE",
+      role: "Vice CHAIRPERSON",
       image: "/placeholder.svg?height=300&width=300",
       bio: "Remote sensing expert focusing on satellite imagery analysis. Currently researching urban heat islands.",
     },
