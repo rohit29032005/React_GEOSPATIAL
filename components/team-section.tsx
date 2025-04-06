@@ -11,7 +11,7 @@ export default function TeamSection() {
     {
       name: "ROHIT SHRIVASTAVA",
       role: "CHAIRPERSON",
-      image: "/public/CHAIRPERSON.jpg?height=300&width=300",
+      image: "/CHAIRPERSON.jpg?height=300&width=300",
       bio: "GIS specialist with a background in environmental science. Passionate about using spatial data to solve real-world problems.",
     },
     {
