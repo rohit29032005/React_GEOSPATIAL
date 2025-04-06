@@ -11,25 +11,25 @@ export default function TeamSection() {
     {
       name: "ROHIT SHRIVASTAVA",
       role: "CHAIRPERSON",
-      image: "/CHAIRPERSON.jpg?height=300&width=300",
+      image: "/CHAIRPERSON.jpg?height=300&width=782",
       bio: "GIS specialist with a background in environmental science. Passionate about using spatial data to solve real-world problems.",
     },
     {
       name: "SAHIL ZAMBRE",
       role: "Vice CHAIRPERSON",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/placeholder.svg?height=300&width=782",
       bio: "Remote sensing expert focusing on satellite imagery analysis. Currently researching urban heat islands.",
     },
     {
-      name: "David Chen",
+      name: "Gaurav Singh",
       role: "Technical Lead",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/placeholder.svg?height=300&width=782",
       bio: "Full-stack developer with expertise in web mapping applications. Loves building interactive geospatial visualizations.",
     },
     {
-      name: "Sarah Williams",
+      name: "Aryan Khatana",
       role: "Events Coordinator",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/placeholder.svg?height=300&width=782",
       bio: "Urban planner with a passion for community mapping. Organizes workshops and field mapping exercises.",
     },
   ]
