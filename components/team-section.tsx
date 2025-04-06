@@ -11,7 +11,7 @@ export default function TeamSection() {
     {
       name: "ROHIT SHRIVASTAVA",
       role: "CHAIRPERSON",
-      image: "/CHAIRPERSON.jpg?height=300&width=782",
+      image: "/CHAIRPERSON_NEW.jpg?height=300&width=782",
       bio: "GIS specialist with a background in environmental science. Passionate about using spatial data to solve real-world problems.",
     },
     {
@@ -80,38 +80,42 @@ function TeamMemberCard({ member, index }) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="perspective-1000"
+    initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5, delay: index * 0.1 }}
+    className="perspective-1000"
+  >
+    <div
+      className={`relative w-full h-[600px] cursor-pointer transition-all duration-500 preserve-3d ${isFlipped ? "rotate-y-180" : ""}`}
+      onClick={() => setIsFlipped(!isFlipped)}
     >
+      {/* Front of card */}
       <div
-        className={`relative w-full h-[400px] cursor-pointer transition-all duration-500 preserve-3d ${isFlipped ? "rotate-y-180" : ""}`}
-        onClick={() => setIsFlipped(!isFlipped)}
+        className={`absolute w-full h-full backface-hidden bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-all duration-500 ${isFlipped ? "opacity-0" : "opacity-100"}`}
       >
-        {/* Front of card */}
-        <div
-          className={`absolute w-full h-full backface-hidden bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-all duration-500 ${isFlipped ? "opacity-0" : "opacity-100"}`}
-        >
-          <img src={member.image || "/placeholder.svg"} alt={member.name} className="w-full h-64 object-cover" />
-          <div className="p-6">
-            <h3 className="text-xl font-bold mb-1 dark:text-white">{member.name}</h3>
-            <p className="text-emerald-600 dark:text-emerald-400 mb-4">{member.role}</p>
-          </div>
-        </div>
-
-        {/* Back of card */}
-        <div
-          className={`absolute w-full h-full backface-hidden bg-emerald-600 dark:bg-emerald-800 text-white rounded-lg shadow-md overflow-hidden flex items-center justify-center p-6 rotate-y-180 transition-all duration-500 ${isFlipped ? "opacity-100" : "opacity-0"}`}
-        >
-          <div className="text-center">
-            <h3 className="text-xl font-bold mb-4">{member.name}</h3>
-            <p className="mb-4">{member.bio}</p>
-            <p className="text-sm italic">Click to flip back</p>
-          </div>
+        <img
+          src={member.image || "/placeholder.svg"}
+          alt={member.name}
+          className="w-full h-96 object-cover"
+        />
+        <div className="p-6">
+          <h3 className="text-xl font-bold mb-1 dark:text-white">{member.name}</h3>
+          <p className="text-emerald-600 dark:text-emerald-400 mb-4">{member.role}</p>
         </div>
       </div>
-    </motion.div>
+  
+      {/* Back of card */}
+      <div
+        className={`absolute w-full h-full backface-hidden bg-emerald-600 dark:bg-emerald-800 text-white rounded-lg shadow-md overflow-hidden flex items-center justify-center p-6 rotate-y-180 transition-all duration-500 ${isFlipped ? "opacity-100" : "opacity-0"}`}
+      >
+        <div className="text-center">
+          <h3 className="text-xl font-bold mb-4">{member.name}</h3>
+          <p className="mb-4">{member.bio}</p>
+          <p className="text-sm italic">Click to flip back</p>
+        </div>
+      </div>
+    </div>
+  </motion.div>
   )
 }
 
