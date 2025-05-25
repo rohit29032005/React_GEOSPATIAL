@@ -7,7 +7,7 @@ import { Mail, Github, Linkedin, Twitter } from "lucide-react"
 export default function TeamPage() {
   const executiveTeam = [
     {
-      name: "Alex Johnson",
+      name: "Rohit Johnson",
       role: "President",
       bio: "GIS specialist with a background in environmental science. Passionate about using spatial data to solve real-world problems.",
       image: "/placeholder.svg?height=300&width=300",
