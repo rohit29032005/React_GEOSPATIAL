@@ -22,7 +22,7 @@ export default function ResourcesPage() {
       description: "A beginner-friendly guide to using QGIS for spatial analysis and mapping.",
       type: "Video",
       icon: <Video className="h-5 w-5" />,
-      link: "#",
+      link: "/resources/videos",
     },
     {
       title: "Web Mapping with Leaflet",
@@ -151,9 +151,15 @@ export default function ResourcesPage() {
                       </CardHeader>
                       <CardFooter>
                         <Button variant="outline" className="w-full" asChild>
-                          <a href={tutorial.link} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="h-4 w-4 mr-2" /> View Tutorial
-                          </a>
+                          {tutorial.link.startsWith("/") ? (
+                            <a href={tutorial.link} target="_blank" rel="noopener noreferrer">
+                              <ExternalLink className="h-4 w-4 mr-2" /> View Tutorial
+                            </a>
+                          ) : (
+                            <a href={tutorial.link} target="_blank" rel="noopener noreferrer">
+                              <ExternalLink className="h-4 w-4 mr-2" /> View Tutorial
+                            </a>
+                          )}
                         </Button>
                       </CardFooter>
                     </Card>
