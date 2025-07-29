@@ -10,31 +10,31 @@ export default function AchievementsTimeline() {
       year: "2023",
       title: "Club Foundation",
       description: "Geospatial Club was established with 15 founding members.",
-      icon: <Users className="h-[2.5rem] w-6" />,
+      icon: <Users className="h-6 w-6" />,
     },
     {
       year: "2023",
       title: "First Mapathon",
       description: "Organized a humanitarian mapping event with over 50 participants.",
-      icon: <MapPin className="h-[2.5rem] w-6" />,
+      icon: <MapPin className="h-6 w-6" />,
     },
     {
       year: "2024",
       title: "GIS Conference",
       description: "Hosted the regional GIS conference with industry professionals.",
-      icon: <Calendar className="h-[2.5rem] w-6" />,
+      icon: <Calendar className="h-6 w-6" />,
     },
     {
       year: "2024",
       title: "Research Grant",
       description: "Received a research grant for urban heat island mapping project.",
-      icon: <Award className="h-[2.5rem] w-6" />,
+      icon: <Award className="h-6 w-6" />,
     },
     {
       year: "2025",
       title: "International Collaboration",
       description: "Partnered with international universities for global mapping initiatives.",
-      icon: <Globe className="h-[2.5rem] w-6" />,
+      icon: <Globe className="h-6 w-6" />,
     },
   ]
 

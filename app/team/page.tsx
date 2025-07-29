@@ -9,7 +9,7 @@ export default function TeamPage() {
       name: "Rohit Shrivastava",
       role: "Chairperson",
       bio: "GIS specialist with a background in environmental science. Passionate about using spatial data to solve real-world problems.",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "rohit.jpg",
       social: {
         email: "alex@geospatialclub.org",
         linkedin: "https://linkedin.com",
@@ -21,7 +21,7 @@ export default function TeamPage() {
       name: "Sahil Zambre",
       role: "Vice Chairperson",
       bio: "Remote sensing expert focusing on satellite imagery analysis. Currently researching urban heat islands.",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "vice.jpg",
       social: {
         email: "maya@geospatialclub.org",
         linkedin: "https://linkedin.com",
@@ -33,7 +33,7 @@ export default function TeamPage() {
       name: "Mehak Wadhwa",
       role: "Secretary",
       bio: "Full-stack developer with expertise in web mapping applications. Loves building interactive geospatial visualizations.",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "Mehak.jpeg",
       social: {
         email: "david@geospatialclub.org",
         linkedin: "https://linkedin.com",
@@ -44,7 +44,7 @@ export default function TeamPage() {
       name: "Nimit Nirbhay",
       role: "Co-Secretary",
       bio: "Urban planner with a passion for community mapping. Organizes workshops and field mapping exercises.",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "nimit.jpeg",
       social: {
         email: "sarah@geospatialclub.org",
         linkedin: "https://linkedin.com",
@@ -68,7 +68,7 @@ export default function TeamPage() {
       name: "Anshika Rai",
       role: "Design Head",
       bio: "Specializes in satellite image processing and classification. Working on land cover change detection.",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "anshika.jpg",
       social: {
         email: "aisha@geospatialclub.org",
         linkedin: "https://linkedin.com",
@@ -78,7 +78,7 @@ export default function TeamPage() {
       name: "Ruana Ahuja",
       role: "PR Marketing Head",
       bio: "Creates interactive web maps and geospatial applications. Passionate about open-source GIS.",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "ruana.jpg",
       social: {
         email: "carlos@geospatialclub.org",
         github: "https://github.com",
@@ -88,7 +88,7 @@ export default function TeamPage() {
       name: "Ankit Kumar",
       role: "Editorial Head",
       bio: "Applies machine learning to geospatial problems. Currently working on predictive models for urban growth.",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "ankit.jpeg",
       social: {
         email: "priya@geospatialclub.org",
         linkedin: "https://linkedin.com",
@@ -102,7 +102,7 @@ export default function TeamPage() {
       name: "Kopal Sachan",
       role: "HR",
       bio: "Urban planner with a passion for community mapping. Organizes workshops and field mapping exercises.",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/Kopal.jpeg",
       social: {
         email: "sarah@geospatialclub.org",
         linkedin: "https://linkedin.com",
@@ -113,7 +113,7 @@ export default function TeamPage() {
       name: "Anshu Khan",
       role: "Outreach Head",
       bio: "Manages partnerships with local organizations and schools. Passionate about GIS education.",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "anshu.jpeg",
       social: {
         email: "michael@geospatialclub.org",
         linkedin: "https://linkedin.com",
@@ -123,7 +123,7 @@ export default function TeamPage() {
       name: "Aryan Khatana",
       role: "Event Head",
       bio: "Handles the club's online presence. Creates engaging content about geospatial technologies.",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/Aryan.jpeg",
       social: {
         email: "emma@geospatialclub.org",
         twitter: "https://twitter.com",

@@ -9,6 +9,18 @@ import { motion } from "framer-motion"
 export default function TeamSection() {
   const teamMembers = [
     {
+      name: "Dr. Surendar Manickam",
+      role: "Faculty Coordinator",
+      image: "surendarsir.jpeg",
+      bio: "GIS specialist with a background in environmental science. Passionate about using spatial data to solve real-world problems.",
+    },
+    {
+      name: "Dr. Prasanth Sekar",
+      role: "Faculty Coordinator",
+      image: "prasanthsekar.jpeg",
+      bio: "Remote sensing expert focusing on satellite imagery analysis. Currently researching urban heat islands.",
+    },
+    {
       name: "ROHIT SHRIVASTAVA",
       role: "CHAIRPERSON",
       image: "/HERO.jpg?height=300&width=782",
@@ -19,18 +31,6 @@ export default function TeamSection() {
       role: "Vice CHAIRPERSON",
       image: "/vice.jpg?height=300&width=782",
       bio: "Remote sensing expert focusing on satellite imagery analysis. Currently researching urban heat islands.",
-    },
-    {
-      name: "ANSHIKA RAI",
-      role: "Creative Lead",
-      image: "/creative.jpg?height=300&width=782",
-      bio: "Full-stack developer with expertise in web mapping applications. Loves building interactive geospatial visualizations.",
-    },
-    {
-      name: "RUANA AHUJA",
-      role: "Pr-MARKETING HEAD",
-      image: "/PR.jpg?height=300&width=782",
-      bio: "Urban planner with a passion for community mapping. Organizes workshops and field mapping exercises.",
     },
   ]
 

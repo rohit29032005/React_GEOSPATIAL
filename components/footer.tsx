@@ -9,7 +9,12 @@ export default function Footer() {
           {/* Logo and Description */}
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
-              <MapPin className="h-8 w-8 text-emerald-400" />
+              {/* <MapPin className="h-8 w-8 text-emerald-400" /> */}
+              <img
+    src="/logo1.png" // Place your logo file in the public folder
+    alt="Geospatial Club Logo"
+    className="h-18 w-16 mr-2"
+  />
               <span className="ml-2 text-xl font-bold">Geospatial Club</span>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">

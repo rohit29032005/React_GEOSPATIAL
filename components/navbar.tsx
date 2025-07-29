@@ -60,13 +60,12 @@ export default function Navbar() {
             transition={{ duration: 0.2 }}
           >
             <Link href="/" className="flex items-center group">
-              <motion.div
-                whileHover={{ rotate: 360 }}
-                transition={{ duration: 0.6 }}
-              >
-                <MapPin className="h-8 w-8 text-emerald-600 dark:text-emerald-400 transition-colors" />
-              </motion.div>
-              <span className="ml-2 text-xl font-bold text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+              <img
+                src="/logo1.png"
+                alt="Geospatial Club Logo"
+                className="h-8 w-8 mr-2 transition-transform group-hover:scale-110"
+              />
+              <span className="ml-1 text-xl font-bold text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
                 Geospatial Club
               </span>
             </Link>
