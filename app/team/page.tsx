@@ -31,8 +31,8 @@ export default function TeamPage() {
       },
     },
     {
-      name: "Kopal Sachan",
-      role: "HR",
+      name: "David Chen",
+      role: "Technical Lead",
       bio: "Full-stack developer with expertise in web mapping applications. Loves building interactive geospatial visualizations.",
       image: "/placeholder.svg?height=300&width=300",
       social: {
@@ -42,8 +42,8 @@ export default function TeamPage() {
       },
     },
     {
-      name: "Mehak Wadhwa",
-      role: "Secretary",
+      name: "Sarah Williams",
+      role: "Events Coordinator",
       bio: "Urban planner with a passion for community mapping. Organizes workshops and field mapping exercises.",
       image: "/placeholder.svg?height=300&width=300",
       social: {
@@ -56,8 +56,8 @@ export default function TeamPage() {
 
   const technicalTeam = [
     {
-      name: "James Wilson",
-      role: "GIS Specialist",
+      name: "Gaurav Singh",
+      role: "Technical Head",
       bio: "Expert in spatial analysis and cartography. Focuses on creating beautiful and informative maps.",
       image: "/placeholder.svg?height=300&width=300",
       social: {
@@ -66,8 +66,8 @@ export default function TeamPage() {
       },
     },
     {
-      name: "Aisha Rahman",
-      role: "Remote Sensing Analyst",
+      name: "Anshika Rai",
+      role: "Design Head",
       bio: "Specializes in satellite image processing and classification. Working on land cover change detection.",
       image: "/placeholder.svg?height=300&width=300",
       social: {
@@ -76,8 +76,8 @@ export default function TeamPage() {
       },
     },
     {
-      name: "Carlos Mendez",
-      role: "Web Developer",
+      name: "Ruana Ahuja",
+      role: "PR Marketing Head",
       bio: "Creates interactive web maps and geospatial applications. Passionate about open-source GIS.",
       image: "/placeholder.svg?height=300&width=300",
       social: {
@@ -86,8 +86,8 @@ export default function TeamPage() {
       },
     },
     {
-      name: "Priya Singh",
-      role: "Data Scientist",
+      name: "Ankit Kumar",
+      role: "Editorial Head",
       bio: "Applies machine learning to geospatial problems. Currently working on predictive models for urban growth.",
       image: "/placeholder.svg?height=300&width=300",
       social: {
@@ -100,8 +100,19 @@ export default function TeamPage() {
 
   const outreachTeam = [
     {
-      name: "Michael Lee",
-      role: "Outreach Coordinator",
+      name: "Kopal Sachan",
+      role: "HR",
+      bio: "Urban planner with a passion for community mapping. Organizes workshops and field mapping exercises.",
+      image: "/placeholder.svg?height=300&width=300",
+      social: {
+        email: "sarah@geospatialclub.org",
+        linkedin: "https://linkedin.com",
+        twitter: "https://twitter.com",
+      },
+    },
+    {
+      name: "Anshu Khan",
+      role: "Outreach Head",
       bio: "Manages partnerships with local organizations and schools. Passionate about GIS education.",
       image: "/placeholder.svg?height=300&width=300",
       social: {
@@ -110,8 +121,38 @@ export default function TeamPage() {
       },
     },
     {
-      name: "Emma Rodriguez",
-      role: "Social Media Manager",
+      name: "Aryan Khatana",
+      role: "Event Head",
+      bio: "Handles the club's online presence. Creates engaging content about geospatial technologies.",
+      image: "/placeholder.svg?height=300&width=300",
+      social: {
+        email: "emma@geospatialclub.org",
+        twitter: "https://twitter.com",
+      },
+    },
+    {
+      name: "Mithileswar Rao",
+      role: "Project Head",
+      bio: "Handles the club's online presence. Creates engaging content about geospatial technologies.",
+      image: "/placeholder.svg?height=300&width=300",
+      social: {
+        email: "emma@geospatialclub.org",
+        twitter: "https://twitter.com",
+      },
+    },
+    {
+      name: "Akshaya Shree",
+      role: "Research Head",
+      bio: "Handles the club's online presence. Creates engaging content about geospatial technologies.",
+      image: "/placeholder.svg?height=300&width=300",
+      social: {
+        email: "emma@geospatialclub.org",
+        twitter: "https://twitter.com",
+      },
+    },
+    {
+      name: "Yuvaraj Sharma",
+      role: "Finance Head",
       bio: "Handles the club's online presence. Creates engaging content about geospatial technologies.",
       image: "/placeholder.svg?height=300&width=300",
       social: {
