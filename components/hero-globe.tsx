@@ -3,50 +3,69 @@
 import { useRef, useState, useEffect } from "react"
 import { Canvas, useFrame, useLoader } from "@react-three/fiber"
 import { OrbitControls, Stars } from "@react-three/drei"
+import { useTheme } from "next-themes"
 import * as THREE from "three"
 
 function Earth(props: any) {
   const earthRef = useRef<THREE.Mesh>(null)
-  const cloudRef = useRef<THREE.Mesh>(null)
+  const cloudsRef = useRef<THREE.Mesh>(null)
+  const { resolvedTheme } = useTheme()
+  
+  // Determine if we're in dark mode
+  const isDarkMode = resolvedTheme === 'dark'
 
-  // Load Earth textures
-  const [earthTexture, earthNormal, earthSpecular, cloudTexture] = useLoader(THREE.TextureLoader, [
-    '/earth-texture.jpg',
-    '/earth-normal.jpg', 
-    '/earth-specular.jpg',
-    '/earth-clouds.jpg'
-  ])
-
-  // Create realistic Earth material with enhanced properties
+  // Load all Earth textures
+  const earthTexture = useLoader(THREE.TextureLoader, '/earth_texture.jpg')
+  const cloudsTexture = useLoader(THREE.TextureLoader, '/earth_clouds.jpg')
+  
+  // Create enhanced Earth material with theme-responsive properties
   const earthMaterial = new THREE.MeshPhongMaterial({
     map: earthTexture,
-    normalMap: earthNormal,
-    specularMap: earthSpecular,
-    shininess: 120,
+    shininess: isDarkMode ? 80 : 100,
     transparent: false,
-    // More natural color and lighting properties
-    color: new THREE.Color(1.0, 1.0, 1.0), // Natural base color
-    emissive: new THREE.Color(0.02, 0.02, 0.03), // Very subtle blue glow
-    normalScale: new THREE.Vector2(0.3, 0.3), // Subtle normal mapping
+    specular: new THREE.Color(isDarkMode ? 0x333333 : 0x222222), // Adjust specular for theme
   })
 
-  const cloudMaterial = new THREE.MeshPhongMaterial({
-    map: cloudTexture,
+  // Create clouds material with theme-responsive opacity
+  const cloudsMaterial = new THREE.MeshLambertMaterial({
+    map: cloudsTexture,
     transparent: true,
-    opacity: 0.25,
+    opacity: isDarkMode ? 0.3 : 0.4, // Slightly more transparent in dark mode
     depthWrite: false,
-    color: new THREE.Color(0.95, 0.95, 0.95), // More natural cloud color
-    emissive: new THREE.Color(0.01, 0.01, 0.01), // Minimal glow
   })
 
-  // Slow rotation
+  // Apply texture wrapping and filtering for better quality
+  earthTexture.wrapS = THREE.RepeatWrapping
+  earthTexture.wrapT = THREE.RepeatWrapping
+  earthTexture.minFilter = THREE.LinearFilter
+  earthTexture.magFilter = THREE.LinearFilter
+
+  cloudsTexture.wrapS = THREE.RepeatWrapping
+  cloudsTexture.wrapT = THREE.RepeatWrapping
+  cloudsTexture.minFilter = THREE.LinearFilter
+  cloudsTexture.magFilter = THREE.LinearFilter
+
+  // Update materials when theme changes
+  useEffect(() => {
+    if (earthRef.current) {
+      earthMaterial.shininess = isDarkMode ? 80 : 100
+      earthMaterial.specular = new THREE.Color(isDarkMode ? 0x333333 : 0x222222)
+      earthMaterial.needsUpdate = true
+    }
+    if (cloudsRef.current) {
+      cloudsMaterial.opacity = isDarkMode ? 0.3 : 0.4
+      cloudsMaterial.needsUpdate = true
+    }
+  }, [isDarkMode, earthMaterial, cloudsMaterial])
+
+  // Smooth rotation animation with different speeds for Earth and clouds
   useFrame(({ clock }) => {
     const elapsedTime = clock.getElapsedTime()
     if (earthRef.current) {
-      earthRef.current.rotation.y = elapsedTime / 15
+      earthRef.current.rotation.y = elapsedTime / 20
     }
-    if (cloudRef.current) {
-      cloudRef.current.rotation.y = elapsedTime / 10
+    if (cloudsRef.current) {
+      cloudsRef.current.rotation.y = elapsedTime / 18 // Clouds rotate slightly faster
     }
   })
 
@@ -57,11 +76,11 @@ function Earth(props: any) {
         <sphereGeometry args={[2, 64, 64]} />
         <primitive object={earthMaterial} attach="material" />
       </mesh>
-
-      {/* Clouds */}
-      <mesh ref={cloudRef} scale={[1.01, 1.01, 1.01]}>
-        <sphereGeometry args={[2, 64, 64]} />
-        <primitive object={cloudMaterial} attach="material" />
+      
+      {/* Clouds layer */}
+      <mesh ref={cloudsRef}>
+        <sphereGeometry args={[2.01, 64, 64]} />
+        <primitive object={cloudsMaterial} attach="material" />
       </mesh>
     </group>
   )
@@ -69,6 +88,10 @@ function Earth(props: any) {
 
 export default function HeroGlobe() {
   const [mounted, setMounted] = useState(false)
+  const { resolvedTheme } = useTheme()
+  
+  // Determine if we're in dark mode
+  const isDarkMode = resolvedTheme === 'dark'
 
   useEffect(() => {
     setMounted(true)
@@ -77,15 +100,41 @@ export default function HeroGlobe() {
   if (!mounted) return null
 
   return (
-    <Canvas className="w-full h-full">
-      <ambientLight intensity={0.4} color="#ffffff" />
-      <pointLight position={[10, 10, 10]} intensity={2.2} color="#ffffff" />
-      <pointLight position={[-10, -10, -10]} intensity={1.0} color="#6bb6ff" />
-      <directionalLight position={[5, 5, 5]} intensity={0.8} color="#ffeb9c" castShadow />
-      <hemisphereLight args={["#87ceeb", "#362d1d", 0.3]} />
+    <Canvas className="w-full h-full" camera={{ position: [0, 0, 8], fov: 45 }}>
+      {/* Theme-responsive ambient lighting */}
+      <ambientLight 
+        intensity={isDarkMode ? 0.6 : 0.9} 
+        color={isDarkMode ? "#ffffff" : "#ffffff"} 
+      />
+      
+      {/* Optional directional light for better contrast in dark mode */}
+      {isDarkMode && (
+        <directionalLight
+          position={[5, 5, 5]}
+          intensity={0.3}
+          color="#ffffff"
+        />
+      )}
+      
       <Earth position={[0, 0, 0]} />
-      <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
-      <OrbitControls enableZoom={false} enablePan={false} rotateSpeed={0.5} autoRotate autoRotateSpeed={0.5} />
+      <Stars 
+        radius={100} 
+        depth={50} 
+        count={isDarkMode ? 6000 : 5000} // More stars in dark mode
+        factor={isDarkMode ? 5 : 4} 
+        saturation={0} 
+        fade 
+        speed={0.5} 
+      />
+      <OrbitControls 
+        enableZoom={true} 
+        enablePan={false} 
+        rotateSpeed={0.3} 
+        autoRotate 
+        autoRotateSpeed={0.2}
+        minDistance={6}
+        maxDistance={12}
+      />
     </Canvas>
   )
 }

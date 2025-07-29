@@ -1,6 +1,5 @@
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
-import { ThemeProvider } from "@/components/theme-provider"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -99,8 +98,7 @@ export default function ResourcesPage() {
   ]
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen">
         <Navbar />
 
         {/* Hero Section */}
@@ -247,7 +245,6 @@ export default function ResourcesPage() {
 
         <Footer />
       </div>
-    </ThemeProvider>
   )
 }
 

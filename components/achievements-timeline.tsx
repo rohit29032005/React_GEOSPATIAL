@@ -64,7 +64,7 @@ export default function AchievementsTimeline() {
   )
 }
 
-function TimelineItem({ achievement, index, isLeft }) {
+function TimelineItem({ achievement, index, isLeft }: { achievement: any, index: number, isLeft: boolean }) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.5 })
 
@@ -100,8 +100,8 @@ function TimelineItem({ achievement, index, isLeft }) {
       </div>
 
       {/* Timeline dot - desktop only */}
-      <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 -translate-y-24 w-12 h-12 rounded-full bg-emerald-500 flex items-center justify-center text-white z-20">
-        <div className="flex items-center justify-center">{achievement.icon}</div>
+      <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 -translate-y-24 w-12 h-12 rounded-full bg-emerald-500 z-20">
+        <div className="flex items-center justify-center h-full w-full">{achievement.icon}</div>
       </div>
     </div>
   )

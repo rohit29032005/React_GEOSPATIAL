@@ -1,3 +1,6 @@
+"use client"
+
+import { useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, MapPin, Globe, Layers, Users } from "lucide-react"
@@ -8,12 +11,26 @@ import EventsSection from "@/components/events-section"
 import ProjectsSection from "@/components/projects-section"
 import HeroGlobe from "@/components/hero-globe"
 import AchievementsTimeline from "@/components/achievements-timeline"
-import { ThemeProvider } from "@/components/theme-provider"
 
 export default function Home() {
+  useEffect(() => {
+    // Handle hash navigation when page loads
+    const hash = window.location.hash.replace('#', '')
+    if (hash) {
+      setTimeout(() => {
+        const element = document.getElementById(hash)
+        if (element) {
+          element.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          })
+        }
+      }, 100) // Small delay to ensure page is fully loaded
+    }
+  }, [])
+
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen">
         <Navbar />
 
         {/* Hero Section with 3D Globe */}
@@ -25,15 +42,14 @@ export default function Home() {
                 <p className="text-xl md:text-2xl mb-8 animate-slideUp">
                   Mapping the future through innovation and technology
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 animate-fadeIn">
-                  <Button className="bg-white text-emerald-800 hover:bg-emerald-50 px-6 py-6 text-lg" asChild>
+                <div className="flex flex-col sm:flex-row gap-4 items-center animate-fadeIn">
+                  <Button className="bg-white dark:bg-emerald-100 text-emerald-800 dark:text-emerald-900 hover:bg-emerald-50 dark:hover:bg-emerald-200 px-6 py-6 text-lg font-semibold shadow-lg" asChild>
                     <Link href="/join">
                       Join Us <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                   </Button>
                   <Button
-                    variant="outline"
-                    className="border-white text-white hover:bg-white/10 px-6 py-6 text-lg"
+                    className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-emerald-800 dark:hover:bg-white/10 dark:hover:text-white px-6 py-6 text-lg font-semibold transition-all duration-300 shadow-lg backdrop-blur-sm"
                     asChild
                   >
                     <Link href="/projects">Explore Projects</Link>
@@ -120,7 +136,7 @@ export default function Home() {
               Be part of a growing community of geospatial enthusiasts. Learn new skills, work on exciting projects, and
               connect with like-minded individuals.
             </p>
-            <Button className="bg-white text-emerald-800 hover:bg-emerald-50 px-8 py-6 text-lg" asChild>
+            <Button className="bg-white dark:bg-emerald-100 text-emerald-800 dark:text-emerald-900 hover:bg-emerald-50 dark:hover:bg-emerald-200 px-8 py-6 text-lg font-semibold shadow-lg" asChild>
               <Link href="/join">
                 Become a Member <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -130,7 +146,6 @@ export default function Home() {
 
         <Footer />
       </div>
-    </ThemeProvider>
   )
 }
 

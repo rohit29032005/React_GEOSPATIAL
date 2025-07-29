@@ -14,7 +14,7 @@ export default function JoinPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-teal-900 to-emerald-700 text-white py-16">
+      <section className="bg-gradient-to-br from-teal-900 to-emerald-700 dark:from-teal-950 dark:to-emerald-900 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Join the Geospatial Club</h1>
           <p className="text-xl max-w-2xl mx-auto">
@@ -24,58 +24,58 @@ export default function JoinPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Why Join Us?</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Why Join Us?</h2>
+            <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               As a member of the Geospatial Club, you'll gain access to a variety of resources and opportunities
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-gray-50 p-6 rounded-lg text-center">
-              <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="h-8 w-8 text-emerald-600" />
+            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg text-center">
+              <div className="bg-emerald-100 dark:bg-emerald-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="h-8 w-8 text-emerald-600 dark:text-emerald-400" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Community</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Community</h3>
+              <p className="text-gray-600 dark:text-gray-300">
                 Connect with fellow students and professionals interested in geospatial technologies
               </p>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg text-center">
-              <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Layers className="h-8 w-8 text-emerald-600" />
+            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg text-center">
+              <div className="bg-emerald-100 dark:bg-emerald-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Layers className="h-8 w-8 text-emerald-600 dark:text-emerald-400" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Projects</h3>
-              <p className="text-gray-600">Work on real-world geospatial projects and build your portfolio</p>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Projects</h3>
+              <p className="text-gray-600 dark:text-gray-300">Work on real-world geospatial projects and build your portfolio</p>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg text-center">
-              <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <BookOpen className="h-8 w-8 text-emerald-600" />
+            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg text-center">
+              <div className="bg-emerald-100 dark:bg-emerald-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <BookOpen className="h-8 w-8 text-emerald-600 dark:text-emerald-400" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Learning</h3>
-              <p className="text-gray-600">Access workshops, tutorials, and resources to enhance your skills</p>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Learning</h3>
+              <p className="text-gray-600 dark:text-gray-300">Access workshops, tutorials, and resources to enhance your skills</p>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg text-center">
-              <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="h-8 w-8 text-emerald-600" />
+            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg text-center">
+              <div className="bg-emerald-100 dark:bg-emerald-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="h-8 w-8 text-emerald-600 dark:text-emerald-400" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Field Trips</h3>
-              <p className="text-gray-600">Participate in field mapping exercises and industry visits</p>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Field Trips</h3>
+              <p className="text-gray-600 dark:text-gray-300">Participate in field mapping exercises and industry visits</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Application Form */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold mb-6">Membership Application</h2>
+          <div className="max-w-2xl mx-auto bg-white dark:bg-gray-900 p-8 rounded-lg shadow-md border dark:border-gray-700">
+            <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Membership Application</h2>
 
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">

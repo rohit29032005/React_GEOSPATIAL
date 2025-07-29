@@ -1,6 +1,5 @@
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
-import { ThemeProvider } from "@/components/theme-provider"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Mail, Github, Linkedin, Twitter } from "lucide-react"
 
@@ -163,8 +162,7 @@ export default function TeamPage() {
   ]
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen">
         <Navbar />
 
         {/* Hero Section */}
@@ -233,11 +231,10 @@ export default function TeamPage() {
 
         <Footer />
       </div>
-    </ThemeProvider>
   )
 }
 
-function TeamMemberCard({ member }) {
+function TeamMemberCard({ member }: { member: any }) {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-100 dark:border-gray-700 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
       <div className="relative">

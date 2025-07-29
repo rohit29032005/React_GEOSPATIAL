@@ -73,7 +73,7 @@ export default function EventsSection() {
 
   return (
     <section className="py-20 bg-white dark:bg-gray-950" id="events">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 dark:text-white">Upcoming Events</h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
@@ -82,8 +82,8 @@ export default function EventsSection() {
           <div className="w-20 h-1 bg-emerald-500 mx-auto mt-4"></div>
         </div>
 
-        <div className="relative">
-          <div className="flex justify-between absolute top-1/2 -translate-y-1/2 w-full px-4 z-10">
+        <div className="relative px-8 py-4">
+          <div className="flex justify-between absolute top-1/2 -translate-y-1/2 w-full px-4 z-10 -mx-8">
             <Button
               variant="outline"
               size="icon"
@@ -110,12 +110,12 @@ export default function EventsSection() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
                 transition={{ duration: 0.5 }}
-                className="grid grid-cols-1 md:grid-cols-3 gap-8"
+                className="grid grid-cols-1 md:grid-cols-3 gap-8 p-4"
               >
                 {visibleEvents.map((event, index) => (
                   <div
                     key={index}
-                    className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-100 dark:border-gray-700 transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                    className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-100 dark:border-gray-700 transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:z-10 relative"
                   >
                     <div className="relative h-48 overflow-hidden">
                       <img

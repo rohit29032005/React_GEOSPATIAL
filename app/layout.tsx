@@ -36,9 +36,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="min-h-[calc(100vh-140px)]">
-            {children}
-          </main>
+          {children}
         </ThemeProvider>
       </body>
     </html>

@@ -69,7 +69,7 @@ export default function ProjectsPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-teal-900 to-emerald-700 text-white py-16">
+      <section className="bg-gradient-to-br from-teal-900 to-emerald-700 dark:from-teal-950 dark:to-emerald-900 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Projects</h1>
           <p className="text-xl max-w-2xl mx-auto">
@@ -79,15 +79,15 @@ export default function ProjectsPage() {
       </section>
 
       {/* Projects Section */}
-      <section className="py-16">
+      <section className="py-16 bg-white dark:bg-gray-950">
         <div className="container mx-auto px-4">
           {/* Search and Filter */}
           <div className="mb-8 flex flex-col md:flex-row gap-4">
             <div className="relative flex-grow">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
-              <Input placeholder="Search projects..." className="pl-10" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500" />
+              <Input placeholder="Search projects..." className="pl-10 bg-white dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white" />
             </div>
-            <Button variant="outline" className="flex items-center gap-2">
+            <Button variant="outline" className="flex items-center gap-2 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
               <Filter className="h-4 w-4" /> Filter
             </Button>
           </div>
@@ -118,7 +118,7 @@ export default function ProjectsPage() {
 
             <TabsContent value="archived" className="mt-6">
               <div className="text-center py-12">
-                <p className="text-gray-500">No archived projects at this time.</p>
+                <p className="text-gray-500 dark:text-gray-400">No archived projects at this time.</p>
               </div>
             </TabsContent>
           </Tabs>
@@ -126,16 +126,16 @@ export default function ProjectsPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Want to Contribute?</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-8">
+          <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Want to Contribute?</h2>
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
             We're always looking for new members to join our projects or propose new ideas. Join our community and start
             contributing today!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-emerald-600 hover:bg-emerald-700 text-white">Join the Club</Button>
-            <Button variant="outline" className="border-emerald-600 text-emerald-600 hover:bg-emerald-50">
+            <Button className="bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-700 dark:hover:bg-emerald-600 text-white">Join the Club</Button>
+            <Button variant="outline" className="border-emerald-600 dark:border-emerald-500 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/20">
               Propose a Project
             </Button>
           </div>
@@ -147,31 +147,31 @@ export default function ProjectsPage() {
   )
 }
 
-function ProjectCard({ project }) {
+function ProjectCard({ project }: { project: any }) {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden h-full flex flex-col">
+    <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md border dark:border-gray-700 overflow-hidden h-full flex flex-col transition-all duration-300 hover:shadow-lg dark:hover:shadow-xl">
       <img src={project.image || "/placeholder.svg"} alt={project.title} className="w-full h-48 object-cover" />
       <div className="p-6 flex-grow flex flex-col">
-        <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-        <p className="text-gray-600 mb-4 flex-grow">{project.description}</p>
+        <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">{project.title}</h3>
+        <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow">{project.description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
-          {project.tags.map((tag, tagIndex) => (
-            <span key={tagIndex} className="bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full">
+          {project.tags.map((tag: string, tagIndex: number) => (
+            <span key={tagIndex} className="bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-300 text-xs px-2 py-1 rounded-full">
               {tag}
             </span>
           ))}
         </div>
         <div className="flex gap-2">
-          <Button variant="default" size="sm" className="bg-emerald-600 hover:bg-emerald-700 text-white">
+          <Button variant="default" size="sm" className="bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-700 dark:hover:bg-emerald-600 text-white">
             View Details
           </Button>
-          <Button variant="outline" size="sm" className="border-gray-300 text-gray-700 hover:bg-gray-50" asChild>
+          <Button variant="outline" size="sm" className="border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800" asChild>
             <a href={project.github} target="_blank" rel="noopener noreferrer">
               <Github className="h-4 w-4 mr-1" /> GitHub
             </a>
           </Button>
           {project.demo && (
-            <Button variant="outline" size="sm" className="border-gray-300 text-gray-700 hover:bg-gray-50" asChild>
+            <Button variant="outline" size="sm" className="border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800" asChild>
               <a href={project.demo} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="h-4 w-4 mr-1" /> Demo
               </a>

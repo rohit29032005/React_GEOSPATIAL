@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { ThemeProvider } from "@/components/theme-provider";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
@@ -169,12 +168,12 @@ const videos2 = [
 ];
 
 
-function VideoSection({ title, videos }) {
+function VideoSection({ title, videos }: { title: string; videos: any[] }) {
   return (
     <section className="mb-12">
       <h2 className="text-2xl font-bold mb-6">{title}</h2>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        {videos.map((video) => (
+        {videos.map((video: any) => (
           <Card key={video.id} className="flex flex-col h-full max-w-xs mx-auto">
             <CardHeader>
               <CardTitle className="text-lg">{video.title}</CardTitle>
@@ -221,15 +220,13 @@ function VideoSection({ title, videos }) {
 
 export default function TutorialVideosPage() {
   return (
-    <ThemeProvider>
-      <div className="min-h-screen flex flex-col bg-background text-foreground">
-        <Navbar />
-        <main className="container flex-1 py-8">
-          <VideoSection title="Overview of Web GIS Technology" videos={videos1} />
-          <VideoSection title="Geographical Information System" videos={videos2} />
-        </main>
-        <Footer />
-      </div>
-    </ThemeProvider>
+    <div className="min-h-screen flex flex-col bg-background text-foreground">
+      <Navbar />
+      <main className="container flex-1 py-8">
+        <VideoSection title="Overview of Web GIS Technology" videos={videos1} />
+        <VideoSection title="Geographical Information System" videos={videos2} />
+      </main>
+      <Footer />
+    </div>
   );
 }
