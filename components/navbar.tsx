@@ -21,10 +21,16 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <MapPin className="h-8 w-8 text-emerald-600 dark:text-emerald-400" />
-            <span className="ml-2 text-xl font-bold text-gray-900 dark:text-white">Geospatial Club</span>
-          </Link>
+                <Link href="/" className="flex items-center">
+      <img
+    src="/logo1.png" // Place your logo file in the public folder
+    alt="Geospatial Club Logo"
+    className="h-18 w-16 mr-2"
+  />
+  {/* Optionally keep the MapPin icon */}
+  {/* <MapPin className="h-8 w-8 text-emerald-600 dark:text-emerald-400" /> */}
+  <span className="ml-2 text-xl font-bold text-gray-900 dark:text-white">Geospatial Club</span>
+    </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">

@@ -10,31 +10,51 @@ export default function AchievementsTimeline() {
       year: "2023",
       title: "Club Foundation",
       description: "Geospatial Club was established with 15 founding members.",
+<<<<<<< HEAD
       icon: <Users className="h-6 w-6" />,
+=======
+      icon: <Users className="h-[2.9rem] w-6" />,
+>>>>>>> fd183fc (added logo and some absic sort)
     },
     {
       year: "2023",
       title: "First Mapathon",
       description: "Organized a humanitarian mapping event with over 50 participants.",
+<<<<<<< HEAD
       icon: <MapPin className="h-6 w-6" />,
+=======
+      icon: <MapPin className="h-[2.9rem] w-6" />,
+>>>>>>> fd183fc (added logo and some absic sort)
     },
     {
       year: "2024",
       title: "GIS Conference",
       description: "Hosted the regional GIS conference with industry professionals.",
+<<<<<<< HEAD
       icon: <Calendar className="h-6 w-6" />,
+=======
+      icon: <Calendar className="h-[2.9rem] w-6" />,
+>>>>>>> fd183fc (added logo and some absic sort)
     },
     {
       year: "2024",
       title: "Research Grant",
       description: "Received a research grant for urban heat island mapping project.",
+<<<<<<< HEAD
       icon: <Award className="h-6 w-6" />,
+=======
+      icon: <Award className="h-[2.9rem] w-6" />,
+>>>>>>> fd183fc (added logo and some absic sort)
     },
     {
       year: "2025",
       title: "International Collaboration",
       description: "Partnered with international universities for global mapping initiatives.",
+<<<<<<< HEAD
       icon: <Globe className="h-6 w-6" />,
+=======
+      icon: <Globe className="h-[2.9rem] w-6" />,
+>>>>>>> fd183fc (added logo and some absic sort)
     },
   ]
 
