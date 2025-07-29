@@ -31,8 +31,8 @@ export default function TeamPage() {
       },
     },
     {
-      name: "David Chen",
-      role: "Technical Lead",
+      name: "Mehak Wadhwa",
+      role: "Secretary",
       bio: "Full-stack developer with expertise in web mapping applications. Loves building interactive geospatial visualizations.",
       image: "/placeholder.svg?height=300&width=300",
       social: {
@@ -42,8 +42,8 @@ export default function TeamPage() {
       },
     },
     {
-      name: "Sarah Williams",
-      role: "Events Coordinator",
+      name: "Nimit Nirbhay",
+      role: "Co-Secretary",
       bio: "Urban planner with a passion for community mapping. Organizes workshops and field mapping exercises.",
       image: "/placeholder.svg?height=300&width=300",
       social: {
