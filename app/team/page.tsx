@@ -7,8 +7,8 @@ import { Mail, Github, Linkedin, Twitter } from "lucide-react"
 export default function TeamPage() {
   const executiveTeam = [
     {
-      name: "Rohit Johnson",
-      role: "President",
+      name: "Rohit Shrivastava",
+      role: "Chairperson",
       bio: "GIS specialist with a background in environmental science. Passionate about using spatial data to solve real-world problems.",
       image: "/placeholder.svg?height=300&width=300",
       social: {
@@ -19,8 +19,8 @@ export default function TeamPage() {
       },
     },
     {
-      name: "Maya Patel",
-      role: "Vice President",
+      name: "Sahil Zambre",
+      role: "Vice Chairperson",
       bio: "Remote sensing expert focusing on satellite imagery analysis. Currently researching urban heat islands.",
       image: "/placeholder.svg?height=300&width=300",
       social: {
@@ -31,8 +31,8 @@ export default function TeamPage() {
       },
     },
     {
-      name: "David Chen",
-      role: "Technical Lead",
+      name: "Kopal Sachan",
+      role: "HR",
       bio: "Full-stack developer with expertise in web mapping applications. Loves building interactive geospatial visualizations.",
       image: "/placeholder.svg?height=300&width=300",
       social: {
@@ -42,8 +42,8 @@ export default function TeamPage() {
       },
     },
     {
-      name: "Sarah Williams",
-      role: "Events Coordinator",
+      name: "Mehak Wadhwa",
+      role: "Secretary",
       bio: "Urban planner with a passion for community mapping. Organizes workshops and field mapping exercises.",
       image: "/placeholder.svg?height=300&width=300",
       social: {
