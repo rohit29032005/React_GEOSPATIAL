@@ -10,7 +10,7 @@ export default function TeamPage() {
       name: "Rohit Shrivastava",
       role: "Chairperson",
       bio: "GIS specialist with a background in environmental science. Passionate about using spatial data to solve real-world problems.",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "rohit.jpg",
       social: {
         email: "alex@geospatialclub.org",
         linkedin: "https://linkedin.com",
@@ -22,7 +22,7 @@ export default function TeamPage() {
       name: "Sahil Zambre",
       role: "Vice Chairperson",
       bio: "Remote sensing expert focusing on satellite imagery analysis. Currently researching urban heat islands.",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "vice.jpg",
       social: {
         email: "maya@geospatialclub.org",
         linkedin: "https://linkedin.com",
@@ -31,10 +31,10 @@ export default function TeamPage() {
       },
     },
     {
-      name: "Kopal Sachan",
-      role: "HR",
+      name: "Mehak Wadhwa",
+      role: "Secretary",
       bio: "Full-stack developer with expertise in web mapping applications. Loves building interactive geospatial visualizations.",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "Mehak.jpeg",
       social: {
         email: "david@geospatialclub.org",
         linkedin: "https://linkedin.com",
@@ -42,10 +42,10 @@ export default function TeamPage() {
       },
     },
     {
-      name: "Mehak Wadhwa",
-      role: "Secretary",
+      name: "Nimit Nirbhay",
+      role: "Co-Secretary",
       bio: "Urban planner with a passion for community mapping. Organizes workshops and field mapping exercises.",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "nimit.jpeg",
       social: {
         email: "sarah@geospatialclub.org",
         linkedin: "https://linkedin.com",
@@ -56,8 +56,8 @@ export default function TeamPage() {
 
   const technicalTeam = [
     {
-      name: "James Wilson",
-      role: "GIS Specialist",
+      name: "Gaurav Singh",
+      role: "Technical Head",
       bio: "Expert in spatial analysis and cartography. Focuses on creating beautiful and informative maps.",
       image: "/placeholder.svg?height=300&width=300",
       social: {
@@ -66,30 +66,30 @@ export default function TeamPage() {
       },
     },
     {
-      name: "Aisha Rahman",
-      role: "Remote Sensing Analyst",
+      name: "Anshika Rai",
+      role: "Design Head",
       bio: "Specializes in satellite image processing and classification. Working on land cover change detection.",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "anshika.jpg",
       social: {
         email: "aisha@geospatialclub.org",
         linkedin: "https://linkedin.com",
       },
     },
     {
-      name: "Carlos Mendez",
-      role: "Web Developer",
+      name: "Ruana Ahuja",
+      role: "PR Marketing Head",
       bio: "Creates interactive web maps and geospatial applications. Passionate about open-source GIS.",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "ruana.jpg",
       social: {
         email: "carlos@geospatialclub.org",
         github: "https://github.com",
       },
     },
     {
-      name: "Priya Singh",
-      role: "Data Scientist",
+      name: "Ankit Kumar",
+      role: "Editorial Head",
       bio: "Applies machine learning to geospatial problems. Currently working on predictive models for urban growth.",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "ankit.jpeg",
       social: {
         email: "priya@geospatialclub.org",
         linkedin: "https://linkedin.com",
@@ -100,18 +100,59 @@ export default function TeamPage() {
 
   const outreachTeam = [
     {
-      name: "Michael Lee",
-      role: "Outreach Coordinator",
+      name: "Kopal Sachan",
+      role: "HR",
+      bio: "Urban planner with a passion for community mapping. Organizes workshops and field mapping exercises.",
+      image: "Kopal.jpeg",
+      social: {
+        email: "sarah@geospatialclub.org",
+        linkedin: "https://linkedin.com",
+        twitter: "https://twitter.com",
+      },
+    },
+    {
+      name: "Anshu Khan",
+      role: "Outreach Head",
       bio: "Manages partnerships with local organizations and schools. Passionate about GIS education.",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "anshu.jpeg",
       social: {
         email: "michael@geospatialclub.org",
         linkedin: "https://linkedin.com",
       },
     },
     {
-      name: "Emma Rodriguez",
-      role: "Social Media Manager",
+      name: "Aryan Khatana",
+      role: "Event Head",
+      bio: "Handles the club's online presence. Creates engaging content about geospatial technologies.",
+      image: "Aryan.jpeg",
+      social: {
+        email: "emma@geospatialclub.org",
+        twitter: "https://twitter.com",
+      },
+    },
+    {
+      name: "Mithileswar Rao",
+      role: "Project Head",
+      bio: "Handles the club's online presence. Creates engaging content about geospatial technologies.",
+      image: "/placeholder.svg?height=300&width=300",
+      social: {
+        email: "emma@geospatialclub.org",
+        twitter: "https://twitter.com",
+      },
+    },
+    {
+      name: "Akshaya Shree",
+      role: "Research Head",
+      bio: "Handles the club's online presence. Creates engaging content about geospatial technologies.",
+      image: "/placeholder.svg?height=300&width=300",
+      social: {
+        email: "emma@geospatialclub.org",
+        twitter: "https://twitter.com",
+      },
+    },
+    {
+      name: "Yuvaraj Sharma",
+      role: "Finance Head",
       bio: "Handles the club's online presence. Creates engaging content about geospatial technologies.",
       image: "/placeholder.svg?height=300&width=300",
       social: {
